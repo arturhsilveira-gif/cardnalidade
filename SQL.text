@@ -74,3 +74,8 @@ INSERT INTO usuarios(nome, email) values ('artur', 'artur@teste.sim')
 INSERT INTO detalhes_usuarios (usuario_id, cpf, endereco) 
 VALUES
 (1, '12345678901', 'rua das flores, 123')
+
+
+UPDATE usuarios
+set nome = 'teste bruno'
+WHERE id = 2
