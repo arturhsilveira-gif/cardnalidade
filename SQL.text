@@ -79,3 +79,27 @@ VALUES
 UPDATE usuarios
 set nome = 'teste bruno'
 WHERE id = 2
+------------------------------------------
+ALTER TABLE detalhes_usuarios
+ADD COLUMN telefone VARCHAR(15)
+
+
+
+
+
+
+
+
+INSERT INTO usuarios(nome, email) VALUES ('nome muito legal', 'email@muito.legal')
+
+
+
+
+
+
+
+
+
+INSERT INTO detalhes_usuarios (usuario_id, cpf, endereco, telefone) 
+VALUES
+(6, '12345677711', 'chin chon, 151', '1111-1111')
