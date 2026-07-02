@@ -1,0 +1,76 @@
+SELECT * from nome_da_tabela;
+// comando para pegar todos os dados da tabela
+
+CREATE nome_da_tabela();
+//comando para criar tabela
+exemplo: 
+CREATE usuario(
+	id serial PRIMARY KEY,
+	nome VARCHAR(150) not null
+	email VARCHAR(150) not null UNIQUE
+);
+
+
+INSERT INTO nome_da_tabela(atributos_da_tabela) VALUES (valores_da_tabela);
+// exemplo: INSERT INTO pessoa(nome, udade, cpf) VALUES ('jocako', 16, 'a0001112225');
+OBS: so da pra passar valor de string em aspas simples
+//
+
+---------------------------------------------------------------------------------------------------------------
+
+exemplo:
+CREATE TABLE usuario(
+	id serial PRIMARY KEY,
+	nome VARCHAR(150) not null,
+	email VARCHAR(150) not null UNIQUE
+);
+
+create table detalhes_usuarios(
+	idUsuario INTEGER PRIMARY KEY,
+	cpf VARCHAR(11) UNIQUE not null,
+	endereco TEXT,
+	CONSTRAINT fk_usuario FOREIGN key(idUsuario) REFERENCES usuario(id) on delete cascade
+);
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+SELECT * from nome_da_tabela;
+// comando para pegar todos os dados da tabela
+
+CREATE nome_da_tabela();
+//comando para criar tabela
+exemplo: 
+CREATE usuario(
+	id serial PRIMARY KEY,
+	nome VARCHAR(150) not null
+	email VARCHAR(150) not null UNIQUE
+);
+
+
+INSERT INTO nome_da_tabela(atributos_da_tabela) VALUES (valores_da_tabela);
+// exemplo: INSERT INTO pessoa(nome, udade, cpf) VALUES ('jocako', 16, 'a0001112225');
+OBS: so da pra passar valor de string em aspas simples
+//
+
+---------------------------------------------------------------------------------------------------------------
+
+exemplo:
+CREATE TABLE usuario(
+	id serial PRIMARY KEY,
+	nome VARCHAR(150) not null,
+	email VARCHAR(150) not null UNIQUE
+);
+
+create table detalhes_usuarios(
+	idUsuario INTEGER PRIMARY KEY,
+	cpf VARCHAR(11) UNIQUE not null,
+	endereco TEXT,
+	CONSTRAINT fk_usuario FOREIGN key(idUsuario) REFERENCES usuario(id) on delete cascade
+);
+
+--
+
+INSERT INTO usuarios(nome, email) values ('artur', 'artur@teste.sim')
+
+INSERT INTO detalhes_usuarios (usuario_id, cpf, endereco) 
+VALUES
+(1, '12345678901', 'rua das flores, 123')
